@@ -1,174 +1,299 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  position: relative;
+  height: auto;
+}
+
+.top-image,
+.bottom-image {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: -1; /* send images behind everything */
+}
+
+.top-image {
+  top: 0;
+  height: 33vh;
+  background: url("./images/360_F_1110027586_fbRdDZs3NpVe2CmgGPyggYMDncuy5Ehy.webp")
+    center/cover no-repeat;
+}
+
+.bottom-image {
+  bottom: 0;
+  height: 32vh;
+  background: url("./images/elegantly-designed-glass-bottle-illuminated-in-rich-shades-of-pink-photo.jpeg")
+    center/cover no-repeat;
 }
 
 body {
-    background: #fff;
-    color: #333;
+  background: #fff;
+  color: #333;
 }
 
 /* HEADER */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid #eee;
-    background: #fff;
-    position: sticky;
-    top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  background: #b49999e8;
+  position: sticky;
+  top: 0;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+  font-size: 24px;
+  font-weight: bold;
 }
 .logo span {
-    color: #c89;
+  color: #c89;
 }
 
 nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
 }
 nav a:hover {
-    color: #c89;
+  color: #c89;
 }
 
 /* PAGE CONTAINER */
 .page {
-    display: none;
-    padding: 40px;
+  display: none;
+  padding: 40px;
 }
 .page.active {
-    display: block;
+  display: block;
+}
+#men {
+  color: rgb(27, 96, 156);
+  margin-bottom: 30px;
+  font-family: none;
+}
+#women {
+  color: rgb(177, 26, 119);
+  margin-bottom: 30px;
+  font-family: none;
 }
 
 /* HERO SECTION */
 .hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
-    color: white;
-    border-radius: 10px;
+  text-align: center;
+  padding: 100px 20px;
+  background: url("https://via.placeholder.com/1200x400") center/cover no-repeat;
+  color: white;
+  border-radius: 10px;
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+  font-size: 48px;
+  margin-bottom: 10px;
 }
 .hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
 .hero button {
-    padding: 12px 25px;
-    margin: 10px;
-    background: #c89;
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 6px;
-    cursor: pointer;
+  padding: 12px 25px;
+  margin: 10px;
+  background: #c89;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 .hero button:hover {
-    background: #a56;
+  background: #a56;
 }
 
 /* PRODUCTS GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
-}
 
 /* PRODUCT CARD */
 .card {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
-.card img {
-    width: 100%;
-    border-radius: 6px;
-}
-.card h3 {
-    margin: 10px 0;
-}
-.card p {
-    font-weight: bold;
-    color: #c89;
+/* MEN CARDS */
+.men-grid .card {
+  background: #c1f0f7c5;
 }
 
+/* WOMEN CARDS */
+.women-grid .card {
+  background: #f8d7e265;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.card h3 {
+  margin: 10px 0;
+  color: #000000;
+}
+.card p {
+  font-weight: bold;
+  color: rgb(112, 27, 55);
+}
 
 /* SALE PAGE */
 #product-page {
-    padding: 20px;
+  padding: 20px;
 }
 
 .back-btn {
-    padding: 10px 15px;
-    background: #c89;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-bottom: 20px;
+  padding: 10px 15px;
+  background: #c89;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .product-container {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
 
 .product-container img {
-    width: 45%;
-    border-radius: 10px;
+  width: 45%;
+  border-radius: 10px;
 }
 
 .info {
-    flex: 1;
+  flex: 1;
 }
 
 .info h2 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .info p {
-    margin-bottom: 20px;
-    font-size: 16px;
+  margin-bottom: 20px;
+  font-size: 16px;
 }
 
 .buy-btn {
-    padding: 15px 25px;
-    background: #c89;
-    border: none;
-    color: white;
-    font-size: 18px;
-    border-radius: 8px;
-    cursor: pointer;
+  padding: 15px 25px;
+  background: #c89;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .buy-btn:hover {
-    background: #a56;
+  background: #a56;
 }
 
 /* RESPONSIVE FOR Samsung S22 Ultra */
+/* Default grid (desktop) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Samsung S22 Ultra / small screens */
 @media (max-width: 800px) {
-    .product-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .product-container img {
-        width: 100%;
-    }
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 15px;
+  }
+
+  /* Optional: adjust product container */
+  .product-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .product-container img {
+    width: 100%;
+  }
+  main.product-page-active {
+    background: rgba(0, 0, 0, 0.253); /* light grey */
+  }
+  main.product-page-active .top-image,
+  main.product-page-active .bottom-image {
+    display: none;
+  }
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  padding: 40px 20px;
+  margin-top: -1px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+.footer-logo span {
+  color: #c89;
+}
+
+.footer-contact h3,
+.footer-social h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+  color: #ccc;
+}
+
+.footer-social .icons a {
+  font-size: 22px;
+  margin-right: 10px;
+  color: #c89;
+  text-decoration: none;
+}
+
+.rights {
+  text-align: center;
+  margin-top: 30px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* Responsive for Samsung S22 Ultra & phones */
+@media (max-width: 800px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin-bottom: 10px;
+  }
 }
