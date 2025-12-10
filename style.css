@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.logo span {
+    color: #c89;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+nav a:hover {
+    color: #c89;
+}
+
+/* PAGE CONTAINER */
+.page {
+    display: none;
+    padding: 40px;
+}
+.page.active {
+    display: block;
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+    color: white;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    padding: 12px 25px;
+    margin: 10px;
+    background: #c89;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.hero button:hover {
+    background: #a56;
+}
+
+/* PRODUCTS GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* PRODUCT CARD */
+.card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.card img {
+    width: 100%;
+    border-radius: 6px;
+}
+.card h3 {
+    margin: 10px 0;
+}
+.card p {
+    font-weight: bold;
+    color: #c89;
+}
+
+
+/* SALE PAGE */
+#product-page {
+    padding: 20px;
+}
+
+.back-btn {
+    padding: 10px 15px;
+    background: #c89;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.product-container img {
+    width: 45%;
+    border-radius: 10px;
+}
+
+.info {
+    flex: 1;
+}
+
+.info h2 {
+    margin-bottom: 10px;
+}
+
+.info p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.buy-btn {
+    padding: 15px 25px;
+    background: #c89;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.buy-btn:hover {
+    background: #a56;
+}
+
+/* RESPONSIVE FOR Samsung S22 Ultra */
+@media (max-width: 800px) {
+    .product-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .product-container img {
+        width: 100%;
+    }
+}
